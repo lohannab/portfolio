@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem enviada — Lohanna B</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .success-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .success-page::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(ellipse, rgba(200,169,110,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .success-card {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 560px;
+            width: 100%;
+            padding: 72px 56px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: var(--dark);
+            animation: fadeUp 0.8s var(--ease) both;
+        }
+
+        .success-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 1px solid rgba(200,169,110,0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 36px;
+        }
+
+        .success-icon svg {
+            width: 26px;
+            height: 26px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .success-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .success-card h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .success-card h1 em {
+            color: var(--accent);
+        }
+
+        .success-card p {
+            font-size: 1rem;
+            color: var(--muted);
+            line-height: 1.8;
+            max-width: 380px;
+            margin: 0 auto 48px;
+        }
+
+        .success-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .success-divider {
+            width: 40px;
+            height: 1px;
+            background: var(--border);
+            margin: 40px auto;
+        }
+
+        .success-detail {
+            font-size: 0.8rem;
+            color: var(--muted);
+            letter-spacing: 0.06em;
+        }
+
+        .success-detail a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .success-detail a:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 600px) {
+            .success-card {
+                padding: 48px 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="nav" class="scrolled">
+        <a href="index.html" class="nav-logo">Lohanna B.</a>
+        <ul class="nav-links">
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#projetos">Projetos</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="success-page">
+        <div class="success-card">
+
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+            </div>
+
+            <span class="success-tag">Mensagem recebida</span>
+
+            <h1>Obrigada<br>pelo contato<em>.</em></h1>
+
+            <p>
+                Fico feliz pelo seu interesse! <br> Responderei o mais breve possível.
+            </p>
+
+            <div class="success-actions">
+                <a href="index.html" class="btn-primary">Voltar ao portfólio</a>
+                <a href="index.html#projetos" class="btn-ghost">Ver projetos</a>
+            </div>
+
+            <div class="success-divider"></div>
+
+            <p class="success-detail">
+                Prefere uma resposta mais rápida?
+                <a href="https://wa.me/5511965842273" target="_blank">WhatsApp</a>
+                ou
+                <a href="mailto:lohannabt@gmail.com">email direto</a>.
+            </p>
+
+        </div>
+    </div>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.add('scrolled');
+        });
+    </script>
+
+</body>
+</html>
